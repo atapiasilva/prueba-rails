@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Ingresa un nuevo ToDo</h1>
+
+  <%= form_with model: @todo, local: true do |f| %>
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description, id: :todo_description,class:'from-text' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :completed %>
+      <%= f.text_area :completed, id: :todo_completed, class:'form-text' %>
+    </div>
+    <%= f.submit 'Enviar', class:'btn btn-primary' %>
+  <% end %>
+</div>
